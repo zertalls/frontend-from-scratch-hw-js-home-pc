@@ -35,4 +35,30 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery() {}
+function updateGallery(obj, keyAnother, valueAnother) {
+  let matchCount = 0;
+
+  for (const key in obj) {
+    if (key === keyAnother) {
+      let strResult = "";
+
+      valueAnother.split(", ").forEach(value => {
+        if (!obj[key].split(", ").includes(value)) {
+          strResult += value;          
+        }                        
+      });
+                
+      obj[key] = `${obj[key]}, ${strResult}`;
+      matchCount++;  
+    }
+  }
+  
+  if (matchCount === 0) {
+    obj[keyAnother] = valueAnother;
+  }
+} 
+
+updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506')
+updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dali')
+
+console.log(gallery)

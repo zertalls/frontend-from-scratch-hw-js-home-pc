@@ -61,4 +61,4 @@ function updateGallery(obj, keyAnother, valueAnother) {
 updateGallery(gallery, 'Mona Lisa', 'Leonardo da Vinci, 1503-1506')
 updateGallery(gallery, 'The Persistence of Memory', 'Salvador Dali')
 
-console.log(gallery)
+

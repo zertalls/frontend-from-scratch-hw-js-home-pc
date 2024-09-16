@@ -36,6 +36,7 @@ startButton.addEventListener('click', () => {
   let counter = 3 
 
   if (!isTimerStarted) {
+    countdownDisplay.textContent = 3
     isTimerStarted = true;
     timerId = setInterval(() => {
       if (counter === 0) {
